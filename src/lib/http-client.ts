@@ -139,23 +139,23 @@ export class HttpClient {
         delete this.client.defaults.headers.common['Authorization'];
     }
 
-    async get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T> {
+    async get<T = any>(url: string, config?: AxiosRequestConfig<any>): Promise<T> {
         return this.client.get(url, config);
     }
 
-    async post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    async post<T = any>(url: string, data?: any, config?: AxiosRequestConfig<any>): Promise<T> {
         return this.client.post(url, data, config);
     }
 
-    async put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    async put<T = any>(url: string, data?: any, config?: AxiosRequestConfig<any>): Promise<T> {
         return this.client.put(url, data, config);
     }
 
-    async patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    async patch<T = any>(url: string, data?: any, config?: AxiosRequestConfig<any>): Promise<T> {
         return this.client.patch(url, data, config);
     }
 
-    async delete<T = any>(url: string, config?: AxiosRequestConfig): Promise<T> {
+    async delete<T = any>(url: string, config?: AxiosRequestConfig<any>): Promise<T> {
         return this.client.delete(url, config);
     }
 
